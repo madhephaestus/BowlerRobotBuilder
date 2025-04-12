@@ -37,24 +37,28 @@ MobileBase result = DeviceManager.getSpecificDevice(name, {
 	String typeL1 = "https://github.com/KacperLa/Ron.git";
 	String sizeL1="Ron.groovy";
 	TransformNR locationL1 = new TransformNR();
-	IVitaminHolder hL1 = base;
+	IVitaminHolder hL1 = link1;
 	VitaminLocation baseVitaminL1= new VitaminLocation( isScript,nL1,  typeL1,  sizeL1,  locationL1, hL1)
 	link1.addVitamin(baseVitaminL1)
+	link1.getShaftVitamin(true)
+	link1.getElectroMechanicalVitamin(true)
 	DHLink dh1 = new DHLink(0, 0, 100, 0)
 	dh1.setListener(new Affine());
 	arm.addNewLink(link1, dh1)
 	
 	// Add Link 2
 	LinkConfiguration linkL2 = new LinkConfiguration(0, -100, 100, 1.0)
-	linkL2.setHardwareIndex(0)
+	linkL2.setHardwareIndex(1)
 	linkL2.setDeviceScriptingName("cdataProvider")
 	String nL2="L2Model";
 	String typeL2 = "https://github.com/KacperLa/Ron.git";
 	String sizeL2="Ron.groovy";
 	TransformNR locationL2 = new TransformNR();
-	IVitaminHolder hL2 = base;
+	IVitaminHolder hL2 = linkL2;
 	VitaminLocation baseVitaminL2= new VitaminLocation( isScript,nL2,  typeL2,  sizeL2,  locationL2, hL2)
 	linkL2.addVitamin(baseVitaminL2)
+	linkL2.getShaftVitamin(true)
+	linkL2.getElectroMechanicalVitamin(true)
 	DHLink dhL2 = new DHLink(0, 0, 100, 0)
 	dhL2.setListener(new Affine());
 	arm.addNewLink(linkL2, dhL2)
